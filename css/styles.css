@@ -15,6 +15,7 @@ body {
   background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
   font-family: 'Merriweather', serif;
   color: #fff;
+  /* border-style: dotted; */
 }
 
 
@@ -71,7 +72,7 @@ section {
 }
 
 .navbar__menu li {
-  display: inline-block;
+  display: inline-flex;
 }
 
 .navbar__menu .menu__link {
@@ -129,7 +130,7 @@ section {
 /* Header Styles */
 .page__header {
   background: #fff;
-  position: relative;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 5;
@@ -259,4 +260,3 @@ section.your-active-class .landing__container::after {
               rotate(-360deg);
   }
 }
-
