@@ -8,6 +8,9 @@
  *
 */
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* ---- Base Rules ---- */
 body {
@@ -17,7 +20,6 @@ body {
   color: #fff;
   /* border-style: dotted; */
 }
-
 
 /* Typeography General*/
 h1 {
@@ -71,7 +73,7 @@ section {
   background-color: darkslategray;
 }
 
-.navbar__menu li {
+.navbar__menu .section {
   display: inline-flex;
 }
 
@@ -81,12 +83,6 @@ section {
   font-weight: bold;
   text-decoration: none;
   color: #000;
-}
-
-.navbar__menu .menu__link:hover {
-  background: #333;
-  color: #fff;
-  transition: ease 0.3s all;
 }
 
 .navbar__menu a {
@@ -99,13 +95,46 @@ section {
   font-size: 16px;
 }
 
+.navbar__menu .menu__link:hover {
+  background: #333;
+  color: #fff;
+  transition: ease 0.3s all;
+}
+
 .navbar__menu a:hover {
   background-color: #ccc;
   color: black;
 }
 
-.navbar__menu {
-  background-color: darkslategray;
+.link--selected, .link:hover.link--selected:hover  {
+  background: #333;
+  color: #fff;
+}
+
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+  .navbar__menu ul {
+    position: sticky;
+    top: 0;
+  }
+}
+nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__menu .navbar__list li a.current {
+  background: black;
+}
+
+main {
+  padding-bottom: 40rem;
+}
+section {
+  padding: 2rem;
+  margin: 0 0 2rem 0;
 }
 
 #myButton {

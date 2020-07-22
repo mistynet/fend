@@ -17,6 +17,8 @@
  * Define Global Variables
  * 
 */
+let nav = document.querySelector(".navbar");
+
 //Get the button
 const mybutton = document.querySelector("#myButton");
 
@@ -24,6 +26,8 @@ const mybutton = document.querySelector("#myButton");
 window.onscroll = () => scrollFunction();
 
 scrollFunction = () => {
+  const selectedLink = document.querySelector('data-id');
+  buildDisplay(selectedLink);
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     mybutton.style.display = "block";
   } else {
@@ -37,13 +41,16 @@ topFn = () => {
   document.documentElement.scrollTop = 0;
 }
 
+
+  //Set up a method to build our display.
+  const buildDisplay = (link) => {
+    console.log(`buildDispaly: ${link}`);
+  };
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
-
-
 
 /**
  * End Helper Functions
@@ -52,11 +59,7 @@ topFn = () => {
 */
 
 // build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
+console.log(nav)
 // Scroll to anchor ID using scrollTO event
 
 
